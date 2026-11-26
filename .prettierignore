@@ -1,0 +1,6 @@
+src-tauri
+vendor
+src/assets
+src/lib/changelog.json
+package-lock.json
+*.md

@@ -1,0 +1,17 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:26.3
+    container_name: chgui-test-ch
+    # CLICKHOUSE_SKIP_USER_SETUP leaves `default` an admin with no password, so stay on loopback.
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:8123:8123"
+    environment:
+      CLICKHOUSE_SKIP_USER_SETUP: "1"
+    volumes:
+      - ./test-ch/cluster.xml:/etc/clickhouse-server/config.d/chgui-cluster.xml:ro
+      - ./test-ch/analyst.xml:/etc/clickhouse-server/users.d/chgui-analyst.xml:ro
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144

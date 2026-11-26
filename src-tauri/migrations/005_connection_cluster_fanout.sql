@@ -1,0 +1,1 @@
+ALTER TABLE connections ADD COLUMN cluster_fanout INTEGER NOT NULL DEFAULT 1;

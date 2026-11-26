@@ -1,0 +1,17 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Mantine's red placeholder on an errored input reads as a typed value. */
+[data-mantine-color-scheme] .mantine-Input-wrapper[data-error] {
+  --input-placeholder-color: var(--mantine-color-placeholder);
+}

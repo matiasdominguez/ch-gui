@@ -1,0 +1,22 @@
+<!-- A user shaped like the analysts: readonly=1 and no REMOTE grant, so
+     connect-time SETs fail and clusterAllReplicas() returns 497. -->
+<clickhouse>
+    <profiles>
+        <chgui_readonly>
+            <readonly>1</readonly>
+        </chgui_readonly>
+    </profiles>
+    <users>
+        <analyst>
+            <password>analyst</password>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <profile>chgui_readonly</profile>
+            <quota>default</quota>
+            <grants>
+                <query>GRANT SELECT ON *.*</query>
+            </grants>
+        </analyst>
+    </users>
+</clickhouse>

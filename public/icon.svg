@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#262A33"/>
+      <stop offset="1" stop-color="#0E1014"/>
+    </linearGradient>
+  </defs>
+  <!-- macOS icon grid: an 824 px tile inside the 1024 px canvas -->
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <!-- the selected column rises above the results table -->
+  <rect x="528" y="310" width="116" height="404" rx="14" fill="#FFC940"/>
+  <!-- results table: a header row, then four rows of cells -->
+  <rect x="232" y="374" width="116" height="44" rx="10" fill="#8C95A5"/>
+  <rect x="380" y="374" width="116" height="44" rx="10" fill="#8C95A5"/>
+  <rect x="676" y="374" width="116" height="44" rx="10" fill="#8C95A5"/>
+  <rect x="232" y="448" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="380" y="448" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="676" y="448" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="232" y="522" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="380" y="522" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="676" y="522" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="232" y="596" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="380" y="596" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="676" y="596" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="232" y="670" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="380" y="670" width="116" height="44" rx="10" fill="#4B5260"/>
+  <rect x="676" y="670" width="116" height="44" rx="10" fill="#4B5260"/>
+</svg>

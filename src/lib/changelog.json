@@ -1,0 +1,333 @@
+[
+  {
+    "version": "0.2.30",
+    "date": "2026-11-26",
+    "changes": [
+      "Autocomplete and the command palette add backticks to database, table, and column names that need them.",
+      "Opening a failed view's INSERT from the table details asks before running it, as the INSERT viewer does.",
+      "Autocomplete no longer freezes on a very long line.",
+      "A server that sends a malformed column type, or thousands of columns with one name, can no longer stall a query or end it without an error."
+    ]
+  },
+  {
+    "version": "0.2.29",
+    "date": "2026-11-18",
+    "changes": [
+      "The menu bar has File and Query menus: New Tab, Reopen Closed Tab, Close Tab, Save, Run, Run All, Cancel, and Format, each with its shortcut.",
+      "⌘⇧L formats your query from anywhere in the window. Before, it worked only inside the editor.",
+      "In the results grid, hovering a cell shows its full text only when the text is cut off."
+    ]
+  },
+  {
+    "version": "0.2.28",
+    "date": "2026-11-18",
+    "changes": [
+      "The row count, the time, Copy, and Export sit above the results grid, beside the Results, Chart, and Profile tabs.",
+      "Settings has a Theme choice: Light, Dark, or Auto. The theme button in the sidebar is gone.",
+      "In the Schema sidebar, double-click a table to preview its first 100 rows."
+    ]
+  },
+  {
+    "version": "0.2.27",
+    "date": "2026-11-17",
+    "changes": [
+      "In the column panel, Cancel stops a running stats scan, and a clock shows how long it has run.",
+      "Closing the column panel, or picking another column, stops the scan on the server.",
+      "Right-click a cell in the results grid for Copy, Copy as Markdown, Inspect cell, Find, and Select all.",
+      "In the results grid, Shift+click extends the selection to the cell you click.",
+      "You can sort a column from the keyboard: Tab to its sort button, then press Enter.",
+      "The Help menu has Keyboard Shortcuts, and the app menu has Settings… (⌘,).",
+      "⌘T opens a new tab, as ⌘N does.",
+      "The left and right arrow keys move between editor tabs.",
+      "In the Schema sidebar, the arrow keys move through databases, tables, and columns.",
+      "In the Schema sidebar, materialized views have their own icon.",
+      "When the Schema sidebar, the table panel, the dependency graph, or Saved fails to load, it shows the server's message and a Retry button.",
+      "When a connection fails to load, the sidebar says so instead of asking you to pick a connection.",
+      "Query History says \"No queries match\" when a search finds nothing.",
+      "In Settings, each switch sits above the option it turns on.",
+      "⌘A outside a text field no longer highlights the whole window."
+    ]
+  },
+  {
+    "version": "0.2.26",
+    "date": "2026-11-03",
+    "changes": [
+      "When a query runs past the server's time limit, the error tells you how to allow more time."
+    ]
+  },
+  {
+    "version": "0.2.25",
+    "date": "2026-11-03",
+    "changes": [
+      "Undo and redo stay within each tab.",
+      "After you switch tabs, Run picks the statement under the cursor in that tab.",
+      "Results show dates before 1970. Before, those queries failed.",
+      "If the app hits an unexpected error, it shows the message and a Reload button instead of a blank window.",
+      "Query History and the table panel's Parts & merges section show the error and a Retry button when they fail to load.",
+      "In Monitor → Live Queries, the \"yours\" tag marks every query your user runs.",
+      "The connection form warns you when Secure (TLS) is off for a remote server.",
+      "Table and database names that contain a backslash no longer break the app's own queries.",
+      "When a server sends malformed data, the app shows an error instead of quitting or freezing.",
+      "A JSON column inside another type, such as Array(JSON), returns an error that tells you to wrap it in toJSONString().",
+      "Panels no longer wait silently when macOS reports no internet connection.",
+      "The app's messages and labels use plainer English.",
+      "The app uses an updated TLS library with security fixes."
+    ]
+  },
+  {
+    "version": "0.2.24",
+    "date": "2026-10-06",
+    "changes": [
+      "Small windows leave more room for results.",
+      "In the ⌘P palette, the tables section reads \"Insert table name\": picking a table types its name into your query.",
+      "The Schema sidebar hides the storage tables of materialized views.",
+      "In the Schema sidebar, hover a table to see its type.",
+      "Times read \"5m ago\". Hover a time to see the exact time in your time zone.",
+      "The Logs panel shows times in your time zone.",
+      "You can use the editor while the table or column panel is open."
+    ]
+  },
+  {
+    "version": "0.2.23",
+    "date": "2026-10-06",
+    "changes": [
+      "Error messages stay on screen until you close them.",
+      "The Logs panel tells read-only users that the server sends them no logs. Before, it kept waiting for logs.",
+      "The connection form opens with the cursor in the Name field.",
+      "Press Enter in the connection form to save the connection.",
+      "The connection form marks each missing field in red.",
+      "In the connection form, turning off Secure (TLS) switches the port from 9440 to 9000.",
+      "In the connection form, pasting a URL into Host keeps only the host name.",
+      "In Monitor → Live Queries, a Stop button replaces the ✕.",
+      "In Monitor → Live Queries, the Stop button appears only on queries you are allowed to stop.",
+      "In Monitor → Live Queries, a message confirms each stopped query.",
+      "Opening a saved query that is already open switches to its tab.",
+      "Tabs opened from History take their name from the query.",
+      "A new tab never takes the name of a tab that is already open."
+    ]
+  },
+  {
+    "version": "0.2.22",
+    "date": "2026-10-01",
+    "changes": [
+      "If macOS refuses to share a connection's password, the sidebar says so under the connection picker and offers Retry and Edit.",
+      "The connection form stays open when you press Esc or click outside it.",
+      "A double-click on Run runs the query once.",
+      "While a query runs, a line under the toolbar shows how long it has run and how far it got.",
+      "Run all labels its result: \"Result of statement 3 of 3\".",
+      "The last result stays on screen, dimmed, until the new one arrives.",
+      "Charting a table by a category counts the rows in each category."
+    ]
+  },
+  {
+    "version": "0.2.21",
+    "date": "2026-09-28",
+    "changes": [
+      "A new look, closer to a native Mac app.",
+      "Wide results scroll sideways, so you can reach the last column."
+    ]
+  },
+  {
+    "version": "0.2.20",
+    "date": "2026-09-28",
+    "changes": [
+      "Closing a tab with a running query asks you to confirm.",
+      "Closing any other tab offers Undo.",
+      "After an update installs, choose Restart now or Later.",
+      "Before restarting for an update, the app warns you if a query is still running.",
+      "In Monitor → Activity, \"View INSERT\" shows a failed view's INSERT, read-only.",
+      "Running that INSERT again from a tab asks you to confirm."
+    ]
+  },
+  {
+    "version": "0.2.19",
+    "date": "2026-09-27",
+    "changes": [
+      "In the Schema sidebar, \"Preview 100 rows\" shows the rows right away. For Kafka and other queue tables, it still opens the query without running it.",
+      "In the Schema sidebar, the ⋯ menu next to each table inserts the table's name into your query or copies it.",
+      "In the Schema sidebar, right-click a table to open its ⋯ menu.",
+      "The Activity count matches the rows marked \"new\".",
+      "The Activity count leaves out queries that failed on a typo.",
+      "Each materialized view failure has a \"Copy for LLM\" button."
+    ]
+  },
+  {
+    "version": "0.2.18",
+    "date": "2026-09-27",
+    "changes": [
+      "A new app icon.",
+      "The app quotes text parameters: {country} with the value US sends 'US'. To insert a column name or other raw SQL, write {!name}.",
+      "Braces in comments and regexes no longer create parameters.",
+      "The Monitor panels reconnect after a dropped connection. They stop only on errors that a retry cannot fix."
+    ]
+  },
+  {
+    "version": "0.2.17",
+    "date": "2026-09-27",
+    "changes": [
+      "⌘P, ⌘S, ⌘W and the other shortcuts work again.",
+      "Each server error has a \"Copy for LLM\" button. It copies the error, its last message, and a query to look it up."
+    ]
+  },
+  {
+    "version": "0.2.16",
+    "date": "2026-09-27",
+    "changes": [
+      "The results grid tells you when it stops at 10,000 rows.",
+      "\"Run without limit\" fetches the rows past 10,000.",
+      "Copied cells paste into spreadsheets as separate cells.",
+      "Search finds tables as well as databases.",
+      "The table drawer lists columns first.",
+      "Column stats load only when you click.",
+      "Column stats work for read-only users.",
+      "The toolbar names the connection your query runs on.",
+      "Deleting a connection tells you how many saved queries it also deletes.",
+      "One Monitor tab holds Server Activity, Kafka, and Live Queries.",
+      "Each Monitor panel shows when it last updated and has a Refresh button."
+    ]
+  },
+  {
+    "version": "0.2.15",
+    "date": "2026-09-27",
+    "changes": [
+      "A failed query has a \"Copy for LLM\" button. It copies the SQL as run, the full error, and the server version, ready to paste into any LLM.",
+      "A long error scrolls in its own pane.",
+      "The toolbar no longer repeats the error.",
+      "ClickHouse's system.query_log names ch-gui as the client, with your user and machine, as it does for clickhouse-client.",
+      "In system.query_log, ch-gui's background checks have a client name ending in \"(monitor)\", so you can filter them out."
+    ]
+  },
+  {
+    "version": "0.2.14",
+    "date": "2026-09-27",
+    "changes": [
+      "Decimals below one display correctly: 0.05 no longer shows as 5.",
+      "Whole numbers display without a stray trailing dot.",
+      "256-bit numbers display instead of failing.",
+      "The results grid numbers its rows. Click a row number to select the row, or click # to select all rows.",
+      "Copied rows leave out the row numbers.",
+      "Dates, text, and enums inside arrays, tuples, and maps display as plain values.",
+      "Columns that share a name all appear: SELECT 1, 1 shows two columns.",
+      "Column names and errors with unusual characters no longer break the query."
+    ]
+  },
+  {
+    "version": "0.2.13",
+    "date": "2026-09-18",
+    "changes": [
+      "Columns with named tuples, such as Array(Tuple(name String, value String)), display instead of failing the whole query.",
+      "Enum columns show their labels (for example TIMEOUT_EXCEEDED) instead of numeric codes.",
+      "On ClickHouse 26.3, the Kafka consumer details work again.",
+      "On ClickHouse 26.3, the table drawer's projections section works again."
+    ]
+  },
+  {
+    "version": "0.2.12",
+    "date": "2026-09-18",
+    "changes": [
+      "Server Activity, Live Queries, and Kafka refresh only while their tab is open.",
+      "Two editor tabs on the same connection each keep their own progress bar and server logs.",
+      "Editing a connection's host, user, password, or certificate takes effect on the next query instead of after a restart.",
+      "Switching between sidebar tabs no longer refreshes a panel that has just refreshed."
+    ]
+  },
+  {
+    "version": "0.2.11",
+    "date": "2026-09-17",
+    "changes": [
+      "Leaving the Errors, Live Queries, or Kafka tab open no longer opens thousands of connections an hour to your ClickHouse cluster.",
+      "If your account can't run cluster-wide queries, the monitoring tabs read only the node you are connected to, instead of showing repeated permission errors.",
+      "The app remembers that choice for each connection.",
+      "Live Queries and Server Activity refresh less often by default. Change how often in Settings."
+    ]
+  },
+  {
+    "version": "0.2.10",
+    "date": "2026-08-06",
+    "changes": [
+      "Querying a table with AggregateFunction columns shows an error instead of an empty result. The error names the column and suggests finalizeAggregation() or a -Merge combinator.",
+      "SimpleAggregateFunction columns display their values like any other column.",
+      "An error while loading a result shows as an error instead of an empty \"No rows returned.\" grid.",
+      "After such an error, the next query reconnects on its own."
+    ]
+  },
+  {
+    "version": "0.2.9",
+    "date": "2026-07-20",
+    "changes": [
+      "In the results grid, double-click a cell or press Enter on it to see the whole value in a popup.",
+      "The value popup formats JSON values and has a Raw toggle.",
+      "Copy in the value popup copies exactly what is on screen and keeps every digit of 19-digit IDs.",
+      "A new Copy ▾ menu on the results toolbar copies the whole result as CSV, TSV, a Markdown table, JSON rows, SQL VALUES tuples, or a Python list.",
+      "The Export button offers CSV, TSV, or JSON Lines.",
+      "A SELECT with no LIMIT returns at most 10,000 rows, so an accidental SELECT * on a billion-row table can't freeze the app or overload the server.",
+      "An amber \"auto-LIMIT hit\" badge shows when the 10,000-row limit left more rows behind.",
+      "A switch on each tab turns off the 10,000-row limit.",
+      "A new Δ button in the sidebar lists every server setting that your profile or admin changed from ClickHouse's defaults. Check it first when a query behaves differently on this connection than elsewhere.",
+      "A new Samples section in the Saved sidebar holds 10 ready-to-run health checks, such as top tables by disk, slowest queries, and replica lag.",
+      "The table drawer has a Copy DDL button.",
+      "The table drawer's Copy names button copies the column names, comma-separated, ready for a SELECT list."
+    ]
+  },
+  {
+    "version": "0.2.8",
+    "date": "2026-07-20",
+    "changes": [
+      "Cancelling a query shows \"Query cancelled\" instead of a red error.",
+      "Cancelling a multi-statement script stops the whole script, not only the current statement.",
+      "While a query runs, the toolbar shows which connection it runs on.",
+      "While a script runs, the toolbar shows the current statement, for example \"Statement 2 of 5\".",
+      "Closing a tab during a query stops the query on the server.",
+      "After you switch connections, the schema, function docs, and activity panels show only the new server's data.",
+      "Cancel always stops the query on the server where it started.",
+      "Re-running the same query keeps your column widths and sort order.",
+      "Copying from the grid shows a \"Copied\" message.",
+      "In History, back-to-back runs of the same statement share one row.",
+      "History deletes unpinned entries after 90 days and never overwrites pinned entries.",
+      "Keyboard shortcuts no longer act behind an open dialog. Before, ⌘W could close a tab you could not see.",
+      "⌘. cancels a running query even with a drawer open.",
+      "Editing a connection keeps its saved password."
+    ]
+  },
+  {
+    "version": "0.2.7",
+    "date": "2026-07-18",
+    "changes": [
+      "Drag across the results grid to select a range of cells.",
+      "Copy a selected range with ⌘C, which pastes into spreadsheets, or with ⌘⇧C as a Markdown table.",
+      "Extend a selected range with ⇧ and the arrow keys.",
+      "Your open tabs keep their SQL, titles, and parameter values after you quit the app.",
+      "Deleting a connection works again. Before, the confirmation dialog never appeared, so Delete did nothing.",
+      "The progress bar and server logs no longer freeze partway through fast queries.",
+      "Pressing ⌘↵ while a query is running no longer mixes up two runs in the same tab.",
+      "Sorting a column clears the row selection. Before, ⌘C could copy a different row than the one you picked."
+    ]
+  },
+  {
+    "version": "0.2.6",
+    "date": "2026-07-07",
+    "changes": [
+      "All tabs run on the connection selected in the sidebar dropdown. Before, queries kept running on the connection the app started with."
+    ]
+  },
+  {
+    "version": "0.2.5",
+    "date": "2026-06-26",
+    "changes": [
+      "Press ⌘⇧C to copy results as a Markdown table: the whole grid, or the selected cell, row, or column.",
+      "After the app updates, What's New lists the changes.",
+      "Open What's New any time from Help → What's New.",
+      "The \"update available\" dialog shows the release notes for the version you are about to install."
+    ]
+  },
+  {
+    "version": "0.2.4",
+    "date": "2026-06-26",
+    "changes": [
+      "⌘↵ runs the statement under the cursor, or the selected text.",
+      "As you move the cursor, the editor highlights the statement that ⌘↵ will run.",
+      "⌘⇧↵ or the new \"Run all\" button runs everything in the editor. ⌘A then ⌘↵ also works.",
+      "Empty results read \"No rows returned.\" instead of showing a blank grid."
+    ]
+  }
+]

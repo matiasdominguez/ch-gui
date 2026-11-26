@@ -1,0 +1,17 @@
+<!-- One-node cluster plus the {cluster} macro, so clusterAllReplicas()
+     fan-out has a target in the docker test server. -->
+<clickhouse>
+    <remote_servers>
+        <chgui_test>
+            <shard>
+                <replica>
+                    <host>localhost</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+        </chgui_test>
+    </remote_servers>
+    <macros>
+        <cluster>chgui_test</cluster>
+    </macros>
+</clickhouse>
