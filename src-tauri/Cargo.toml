@@ -1,6 +1,6 @@
 [package]
 name = "ch-gui"
-version = "0.2.30"
+version = "0.2.31"
 description = "ClickHouse desktop GUI"
 authors = ["Matias Dominguez"]
 license = "MIT"
