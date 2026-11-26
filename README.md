@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://downloads.matiasdominguez.dev/chgui_0.2.30_aarch64.dmg"><b>Download for macOS</b></a>
+  <a href="https://downloads.matiasdominguez.dev/chgui_aarch64.dmg"><b>Download for macOS</b></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/matiasdominguez/ch-gui/releases">Release notes</a>
   &nbsp;·&nbsp;
@@ -42,7 +42,8 @@ merges, failed materialized views, Kafka consumers, replication queues, and
 ## Install
 
 1. Download
-   [`chgui_0.2.30_aarch64.dmg`](https://downloads.matiasdominguez.dev/chgui_0.2.30_aarch64.dmg).
+   [`chgui_aarch64.dmg`](https://downloads.matiasdominguez.dev/chgui_aarch64.dmg).
+   That link always serves the newest version.
 2. Open it and drag **chgui** to Applications.
 3. Add a connection. Use port `9440` with **Secure** on.
 
@@ -51,9 +52,8 @@ The app is signed with a Developer ID and notarized by Apple, and it installs
 its own updates.
 
 Download ch-gui only from `downloads.matiasdominguez.dev`. To check a download,
-run `shasum -a 256` on the file and compare the result with the SHA-256 on that
-version's entry in
-[Releases](https://github.com/matiasdominguez/ch-gui/releases).
+run `shasum -a 256` on the file and compare the result with the SHA-256 on the
+newest entry in [Releases](https://github.com/matiasdominguez/ch-gui/releases).
 
 ## Features
 
