@@ -48,6 +48,6 @@ whoami = "1.6"
 strip = "none"
 
 # Upstream klickhouse lacks the server log streaming, JSON, named tuple, and other patches
-# this app needs. README.md lists them.
+# this app needs. docs/architecture.md lists them.
 [patch.crates-io]
 klickhouse = { path = "../vendor/klickhouse" }

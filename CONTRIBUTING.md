@@ -6,7 +6,7 @@ change, so we can agree on the approach first. Report security problems as
 
 ## Setup and checks
 
-[`README.md`](README.md#development) lists the requirements, setup steps, and
+[`docs/development.md`](docs/development.md) lists the requirements, setup steps, and
 test commands. The repo has no CI, so run these checks before opening a pull
 request. If your change touches the backend or the driver, also run the
 integration tests against the Docker server.
@@ -29,7 +29,8 @@ it. New logic with a branch, a parser, or a security impact needs a test.
 it:
 
 1. Add a `// chgui patch:` comment on the change.
-2. Add or update its bullet in the README's "Vendored `klickhouse`" section.
+2. Add or update its bullet in the "Vendored `klickhouse`" section of
+   [`docs/architecture.md`](docs/architecture.md).
 3. Add a test in the fork, and a live test in `src-tauri/tests/` if the change
    depends on server behavior.
 

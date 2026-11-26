@@ -27,6 +27,7 @@ npm version "$NEW" --no-git-tag-version >/dev/null
 # perl -i edits in place on macOS, where sed -i needs an extra argument.
 perl -pi -e "s/^(  \"version\": )\"\Q$OLD\E\"/\$1\"$NEW\"/" src-tauri/tauri.conf.json
 perl -pi -e "\$done ||= s/^version = \"\Q$OLD\E\"/version = \"$NEW\"/" src-tauri/Cargo.toml
+perl -pi -e "s/chgui_\Q$OLD\E_aarch64\.dmg/chgui_${NEW}_aarch64.dmg/g" README.md
 
 (cd src-tauri && cargo update --workspace --offline --quiet)
 
@@ -36,10 +37,11 @@ fail() { echo "✗ $1 still lacks $NEW" >&2; exit 1; }
 [ "$(jq -r .version src-tauri/tauri.conf.json)" = "$NEW" ] || fail src-tauri/tauri.conf.json
 grep -qF "version = \"$NEW\"" src-tauri/Cargo.toml || fail src-tauri/Cargo.toml
 grep -A1 '^name = "ch-gui"' src-tauri/Cargo.lock | grep -qF "version = \"$NEW\"" || fail src-tauri/Cargo.lock
+grep -qF "chgui_${NEW}_aarch64.dmg" README.md || fail README.md
 
 echo "✓ Bumped to $NEW:"
 git status --short package.json package-lock.json src-tauri/tauri.conf.json \
-  src-tauri/Cargo.toml src-tauri/Cargo.lock
+  src-tauri/Cargo.toml src-tauri/Cargo.lock README.md
 cat <<MSG
 
 Next:
